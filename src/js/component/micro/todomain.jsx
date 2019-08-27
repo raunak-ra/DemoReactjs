@@ -1,20 +1,14 @@
 import React, { Component } from "react";
 
-
 class TodoMain extends Component {
+  
   constructor(props) {
     super(props);
     this.searchClick = this.searchClick.bind(this);
-    this.addClick = this.addClick.bind(this);
   }
-
   searchClick() {
-    console.log('Click happened on search');
+    console.log("Click happened on search");
   }
-  addClick() {
-    console.log('Click happened on add');
-  }
-
   render() {
     return (
       <div id="todo-popup" className="popup">
@@ -33,9 +27,7 @@ class TodoMain extends Component {
             </button>
           </li>
         </ul>
-      </div>
-    );
+      </div> );
   }
 }
-
 export default TodoMain;
