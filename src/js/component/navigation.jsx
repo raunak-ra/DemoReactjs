@@ -9,17 +9,35 @@ import Logout from './micro/logout.jsx';
 import DispTask from './micro/disptask.jsx';
 
 class Navigation extends Component {
+    constructor(props) {
+        super(props);
+         this.state = {
+           items : [ 1,2,3,4]
+         }
+      }
+     
+    addItem(itemname)
+    { 
+         
+        let newItem = this.state.items;
+        newItem.push(itemname);
+        this.setState(
+            {
+                items : newItem
+            }
+        )
+    }
     render() { 
         return ( 
             <div className="nav">
            
-            <TodoMain /> 
+            <TodoMain addItem={this.addItem.bind(this)}/> 
             <Slist />
             <Modal />
             <User />
             <Dept />
             <Logout />   
-            <DispTask />  
+            <DispTask items={this.state.items} />  
            
           </div>
          );

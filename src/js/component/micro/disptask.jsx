@@ -5,7 +5,13 @@ class DispTask extends Component {
     return (
       <div className="displaytask" id="taskcop">
         <h2>TASK LISTS TO COMPLETE</h2>
-        <ul id="items"></ul>
+        <ul id="items">
+         {
+           this.props.items.map(item => <li>
+             {item}
+             <button className='editBtn'>Edit</button> <button onclick='deleteItem(this)' className='deleteBtn'>Delete</button><hr></hr></li>)
+         }
+        </ul>
       </div>
     );
   }

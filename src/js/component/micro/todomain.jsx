@@ -2,13 +2,11 @@ import React, { Component } from "react";
 
 class TodoMain extends Component {
   
-  constructor(props) {
-    super(props);
-    this.searchClick = this.searchClick.bind(this);
-  }
+
   searchClick() {
     console.log("Click happened on search");
   }
+ 
   render() {
     return (
       <div id="todo-popup" className="popup">
@@ -22,7 +20,7 @@ class TodoMain extends Component {
             </button>
           </li>
           <li>
-            <button className="sbutton" onClick={this.addClick}>
+            <button className="sbutton" onClick={() => this.props.addItem("gjhgjhk")}>
               <span>Add </span>
             </button>
           </li>
