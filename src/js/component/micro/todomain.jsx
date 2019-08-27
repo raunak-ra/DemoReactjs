@@ -2,13 +2,19 @@ import React, { Component } from "react";
 
 
 class TodoMain extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.style = {
-      cursor: "pointer",
-      background: "red"
-    }
+    this.searchClick = this.searchClick.bind(this);
+    this.addClick = this.addClick.bind(this);
   }
+
+  searchClick() {
+    console.log('Click happened on search');
+  }
+  addClick() {
+    console.log('Click happened on add');
+  }
+
   render() {
     return (
       <div id="todo-popup" className="popup">
@@ -17,12 +23,12 @@ class TodoMain extends Component {
             <input id="myInput" type="text" placeholder="Add Task" />
           </li>
           <li>
-            <button className="sbutton" >
+            <button className="sbutton" onClick={this.searchClick}>
               <span>Search </span>
             </button>
           </li>
           <li>
-            <button className="sbutton" >
+            <button className="sbutton" onClick={this.addClick}>
               <span>Add </span>
             </button>
           </li>
