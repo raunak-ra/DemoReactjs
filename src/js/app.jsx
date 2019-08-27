@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from "./container.jsx";
-import Nav from "./nav.jsx";
+import Header from "./component/header.jsx"
+import Container from "./component/container.jsx";
+import Footer from "./component/footer.jsx";
 
 class App extends React.Component{
     render(){
         return (
             <div>
-              <Nav />
-           <Container />
+              <Header />
+              <Container />
+              <Footer />
             </div>       
         );
     }

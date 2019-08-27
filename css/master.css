@@ -5,35 +5,17 @@
     font-family: serif;
 }
 
-h1 {
-    color: rgb(230, 33, 33);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-h2 {
-    position: relative;
-    padding: 40px;
-    color: blue;
-}
-
 header {
     width: 100%;
     background: grey;
     padding: 30px;
-    color: black;
+    color: white;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    height: 30px;
-    width: 100%;
-    background: grey;
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 10px;
-    color: #d4d4d4;
+body {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
 }
 
 .container {
@@ -43,24 +25,18 @@ footer {
     height: 80%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 5px;
-    padding: 2px;
-}
-
-#content {
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-}
-
 .nav {
     width: 100%
 }
 
 #list {
     width: 60px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 2px;
 }
 
 #todo-popup {
@@ -78,11 +54,39 @@ ul {
     padding: 80px;
 }
 
+h1 {
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    position: relative;
+    padding: 40px;
+    color: blue;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background: grey;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #d4d4d4;
+}
+
 #user-popup,
 #dept-popup,
 #logout-popup {
     display: none;
 }
+
+
+/*.
+/* TODO: ................................... */
 
 input {
     border: 1px solid transparent;
@@ -97,6 +101,9 @@ input[type=text] {
     width: 60%;
     display: inline-block;
 }
+
+
+/* TODO: ................................... */
 
 #suggestions-list {
     position: relative;
@@ -136,6 +143,6 @@ input[type=text] {
     top: 27vh;
     height: 20vh;
     width: 30vw;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     z-index: 1;
 }
